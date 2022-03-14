@@ -1,0 +1,253 @@
+body{
+    padding: 0;
+    display: flex;
+    justify-content: center;  
+}
+
+.card-container
+{
+    width: 375px;
+    height: 650px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #707070;
+    
+}
+
+.header
+{
+    position: absolute;
+    width: 375px;
+    height: 200px;
+    background-image: url(./assets/images/todo-bg\ \(1\).png);
+    border-radius: 20px;
+}
+
+.todo-title
+{
+    color: #fff;
+  
+}
+
+.modal
+{
+    display: none;
+    position: relative;
+    width: 375px;
+    height: 650px;
+    background-color: #00000030;
+    border-radius: 20px;
+}
+
+.show
+{
+    display: block;
+    animation-duration: 1s;
+    animation-name: openModal;
+}
+
+@keyframes openModal
+{
+    from{
+        height: 0;
+    }
+
+    to{
+        height: 100%;
+    }
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 1rem;
+    border-radius: 20px;
+    
+}
+
+.group-logo
+{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    margin-top: 6vh;
+    cursor: pointer;
+}
+
+.title-text{
+
+    width: 90%;
+    background-color: #f9f9f9;
+    border: 1px solid #707070;
+    font-size: 18px;
+}
+
+.title-text::placeholder
+{
+    color: #afafaf;
+    
+}
+
+.description-text
+{
+    height: 100px;
+    width: 90%;
+    background-color: #f9f9f9;
+    border: 1px solid #707070;
+    font-size: 18px;
+}
+
+.description-text::placeholder{
+
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    color: #afafaf;
+    
+}
+
+.btn-create
+{
+    cursor: pointer;
+    background-color: #c361ff;
+    height: 40px;
+    width: 92%;
+}
+
+.check-create
+{
+    width: 15px;
+    height: 15px;
+}
+
+.todo-checkbox
+{
+    height: 16px;
+    width: 16px;
+    border-radius: none;
+    border: 1px solid black;
+}
+
+.todo-list
+{
+    margin-top: 4vh;
+}
+
+.title-description
+
+{
+    margin-top: -0.7vh;
+    padding-left:0.8rem;
+    
+}
+
+.title-box
+{
+    font-size: 16px;
+}
+
+.description-box
+{
+    font-size: 16px;
+    padding-top: -0.5rem;
+}
+
+.todos{
+    position: absolute;
+    width: inherit;
+    margin-top: 210px;
+    padding-left: 0;
+    height: 550px;
+    max-height: 550px;
+    overflow-y: auto;
+}
+
+.none-todos {
+    top: 40%;
+    position: absolute;
+    left: 3%;
+    color: #c361ff;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+.todo-item{
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.todo-item.complete {
+    background-color: #ebe8ed;
+    transition: all 0.6s;
+  }
+  
+  .todo-item.complete .todo-item-check {
+    background-color: #c361ff;
+    border: 2px solid #8b00e170;
+  }
+  
+  .todo-item.complete .todo-item-title {
+    text-decoration: line-through;
+  }
+  
+
+.todo-item-check
+{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border:2px solid #707070;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.todo-item-details {
+    width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .remove-todo {
+    cursor: pointer;
+  }
+  
+  .todo-item-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .todo-item-desc {
+    display: block;
+    width: 250px;
+    font-size: 19px;
+    color: #707070;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+.save-btn {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    bottom: 20px;
+    width: 92%;
+    margin-left: 5%;
+    background-color: #c361ff;
+    color: white;
+    border: 2px solid #8b00e170;
+    font-weight: 900;
+    font-size: 20px;
+  }
